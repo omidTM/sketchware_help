@@ -138,5 +138,12 @@
     "image": "https://s16.picofile.com/file/8425685050/PicsArt_02_20_05_50_58.png",
     "video": "https://www.aparat.com/video/video/embed/videohash/8PXMO/vt/frame?\u0026recom\u003dnone",
     "code": ""
+  },
+  {
+    "1": "shortcut",
+    "2": "شما در این اموزش یاد میگیرید که چطور برای برنامه خودتون shortcut بسازید و از کاربرد های ان لذت ببرید \nبا ما همراه باشید با اموزش ساخت shortcut برای برنامتون \nمدرس:امید مددی\nتدوین: یوسف صادقی\nارائه شده توسط تیم اسکچور هلپر",
+    "image": "https://s17.picofile.com/file/8425813826/PicsArt_02_21_10_20_59.png",
+    "video": "https://www.aparat.com/video/video/embed/videohash/9DZyR/vt/frame?\u0026recom\u003dnone",
+    "code": "//Sketchware Helper\n\nandroid.content.pm.ShortcutManager shortcutManager \u003d null;\nif (Build.VERSION.SDK_INT \u003e\u003d Build.VERSION_CODES.N_MR1) {\n\tshortcutManager \u003d getSystemService(android.content.pm.ShortcutManager.class);\n}\nif (shortcutManager !\u003d null) {\n\tandroid.content.pm.ShortcutInfo shortcut_1 \u003d new android.content.pm.ShortcutInfo.Builder(MainActivity.this, \"Activity1\")\n\t.setShortLabel(\"Activity1\")\n\t.setLongLabel(\"Activity1\")\n\t.setRank(0)\n\t.setIntent(new android.content.Intent(android.content.Intent.ACTION_VIEW, null, MainActivity.this, Ac1Activity.class))\n\t.setIcon(android.graphics.drawable.Icon.createWithResource(MainActivity.this, R.drawable.img))\n\t.build();\n\tandroid.content.pm.ShortcutInfo shortcut_2 \u003d new android.content.pm.ShortcutInfo.Builder(MainActivity.this, \"Activity2\")\n\t.setShortLabel(\"Browser\")\n\t.setLongLabel(\"Open Browser\")\n\t.setRank(1)\n\t.setIntent(new android.content.Intent(android.content.Intent.ACTION_VIEW, Uri.parse(\"https://google.com\")))\n\t.setIcon(android.graphics.drawable.Icon.createWithResource(MainActivity.this, R.drawable.img))\n\t.build();\n\tandroid.content.pm.ShortcutInfo shortcut_3 \u003d new android.content.pm.ShortcutInfo.Builder(MainActivity.this, \"Activity3\")\n\t.setShortLabel(\"Activity2\")\n\t.setLongLabel(\"Activity2\")\n\t.setRank(2)\n\t.setIntent(new android.content.Intent(android.content.Intent.ACTION_VIEW, null, MainActivity.this, Ac2Activity.class))\n\t.setIcon(android.graphics.drawable.Icon.createWithResource(MainActivity.this, R.drawable.img))\n\t.build();\n\tshortcutManager.setDynamicShortcuts(java.util.Arrays.asList(shortcut_1, shortcut_2, shortcut_3));\n}"
   }
 ]
